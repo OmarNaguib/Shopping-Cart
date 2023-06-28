@@ -35,3 +35,34 @@
 .header a:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
+
+.home {
+  height: calc(100vh - 100px);
+  background-image: url("../assets/wallpapers/wallpaper3.jpg");
+  background-position: 40% 30%;
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  grid-template-rows: 1fr 300px 1fr;
+}
+
+.home-message {
+  color: white;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-right: 50px;
+  background-color: rgb(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+
+.cool-text {
+  color: #2563eb;
+}
+
+.special-text {
+  color: red;
+}
