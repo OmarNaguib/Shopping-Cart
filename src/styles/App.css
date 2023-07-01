@@ -67,3 +67,18 @@
 .special-text {
   color: red;
 }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  height: 500px;
+}
+
+.card > img {
+  width: 200px;
+  height: auto;
+}
