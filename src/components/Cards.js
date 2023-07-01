@@ -1,15 +1,4 @@
-import { useState } from "react";
-export default function Cards({ data }) {
-  const [items, setItems] = useState(data);
-
-  const addTocart = (index) => {
-    setItems((prevItems) => {
-      console.log(prevItems, "here", index);
-      prevItems[index].inCart = true;
-      return [...prevItems];
-    });
-  };
-
+export default function Cards({ items, addTocart }) {
   const cards = items.map((item, index) => (
     <div className="card">
       <img src={item.src} alt="" />
