@@ -3,14 +3,12 @@ import removeExtension from "./removeExtension";
 function importAll(r) {
   return r.keys().map((item, index) => {
     const attributes = removeExtension(item.replace("./", "")).split("_");
-    console.log(attributes);
-
-    console.log(item);
     return {
       src: r(item),
       chosen: false,
       name: attributes[1],
       price: attributes[2],
+      inCart: false,
     };
   });
 }
