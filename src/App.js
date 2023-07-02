@@ -12,12 +12,31 @@ function App() {
 
   const addToCart = (index) => {
     setItems((prevItems) => {
-      prevItems[index].inCart = true;
+      prevItems[index].inCart = 1;
       return [...prevItems];
     });
   };
 
-  // const removeFromCart
+  const removeFromCart = (index) => {
+    setItems((prevItems) => {
+      prevItems[index].inCart = 0;
+      return [...prevItems];
+    });
+  };
+
+  const increment = (index) => {
+    setItems((prevItems) => {
+      prevItems[index].inCart += 1;
+      return [...prevItems];
+    });
+  };
+
+  const decrement = (index) => {
+    setItems((prevItems) => {
+      prevItems[index].inCart -= 1;
+      return [...prevItems];
+    });
+  };
   return (
     <>
       <BrowserRouter>

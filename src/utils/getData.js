@@ -8,7 +8,7 @@ function importAll(r) {
       chosen: false,
       name: attributes[1],
       price: attributes[2],
-      inCart: false,
+      inCart: 0,
     };
   });
 }
