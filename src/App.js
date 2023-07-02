@@ -10,12 +10,14 @@ import "./styles/App.css";
 function App() {
   const [items, setItems] = useState(getData());
 
-  const addTocart = (index) => {
+  const addToCart = (index) => {
     setItems((prevItems) => {
       prevItems[index].inCart = true;
       return [...prevItems];
     });
   };
+
+  // const removeFromCart
   return (
     <>
       <BrowserRouter>
@@ -24,7 +26,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route
             path="/Shop"
-            element={<Shop items={items} addTocart={addTocart} />}
+            element={<Shop items={items} addToCart={addToCart} />}
           ></Route>
           <Route path="/Cart" element={<Cart />}></Route>
         </Routes>
