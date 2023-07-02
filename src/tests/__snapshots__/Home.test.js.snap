@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home page renders correct elements 1`] = `
+<div>
+  <div
+    class="home"
+  >
+    <div
+      class="home-message"
+    >
+      <div
+        class="text"
+      >
+        Athletes are cool 
+        <br />
+         But some are just
+         
+        <span
+          class="special-text"
+        >
+          Exceptional
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Home page renders correctly 1`] = `
+<div>
+  <div
+    class="home"
+  >
+    <div
+      class="home-message"
+    >
+      <div
+        class="text"
+      >
+        Athletes are cool 
+        <br />
+         But some are just
+         
+        <span
+          class="special-text"
+        >
+          Exceptional
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

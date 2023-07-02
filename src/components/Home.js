@@ -1,4 +1,5 @@
 export default function Home() {
+  console.log("hrereakfjhawfdhalkjwhf;lahw");
   return (
     <div className="home">
       <div className="home-message">

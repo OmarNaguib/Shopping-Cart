@@ -61,6 +61,8 @@ function App() {
       })
     );
   };
+
+  console.log(items);
   return (
     <>
       <BrowserRouter>

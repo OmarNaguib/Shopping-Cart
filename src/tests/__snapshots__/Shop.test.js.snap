@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shop page renders with one item 1`] = `
+<div>
+  <div
+    class="shop"
+  >
+    <div
+      class="cards"
+    >
+      <div
+        class="card"
+      >
+        <img
+          alt=""
+          src="/static/media/1table_JOOLA J15 INSIDE TABLE TENNIS TABLE_599.00.dd9ef9f4bbc1398f6cc7.jpg"
+        />
+        <div
+          class="name"
+        >
+          JOOLA J15 INSIDE TABLE TENNIS TABLE
+        </div>
+        <div
+          class="price"
+        >
+          £
+          599.00
+        </div>
+        <button>
+          Add to Cart
+        </button>
+        not
+      </div>
+    </div>
+  </div>
+</div>
+`;
