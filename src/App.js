@@ -47,7 +47,17 @@ function App() {
             path="/Shop"
             element={<Shop items={items} addToCart={addToCart} />}
           ></Route>
-          <Route path="/Cart" element={<Cart />}></Route>
+          <Route
+            path="/Cart"
+            element={
+              <Cart
+                removeFromCart={removeFromCart}
+                increment={increment}
+                decrement={decrement}
+                items={items}
+              />
+            }
+          ></Route>
         </Routes>
       </BrowserRouter>
     </>

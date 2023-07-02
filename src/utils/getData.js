@@ -9,6 +9,7 @@ function importAll(r) {
       name: attributes[1],
       price: attributes[2],
       inCart: 0,
+      id: index,
     };
   });
 }

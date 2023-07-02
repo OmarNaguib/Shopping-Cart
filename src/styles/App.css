@@ -82,3 +82,13 @@
   width: 200px;
   height: auto;
 }
+
+.checkout-item {
+  height: 100px;
+  width: 500px;
+}
+
+.checkout-item > img {
+  height: 90px;
+  width: auto;
+}
