@@ -10,32 +10,56 @@ import "./styles/App.css";
 function App() {
   const [items, setItems] = useState(getData());
 
-  const addToCart = (index) => {
-    setItems((prevItems) => {
-      prevItems[index].inCart = 1;
-      return [...prevItems];
-    });
+  const addToCart = (indexToChange) => {
+    setItems((prevItems) =>
+      prevItems.map((item, index) => {
+        if (indexToChange === index)
+          return {
+            ...item,
+            inCart: 1,
+          };
+        return item;
+      })
+    );
   };
 
-  const removeFromCart = (index) => {
-    setItems((prevItems) => {
-      prevItems[index].inCart = 0;
-      return [...prevItems];
-    });
+  const removeFromCart = (indexToChange) => {
+    setItems((prevItems) =>
+      prevItems.map((item, index) => {
+        if (indexToChange === index)
+          return {
+            ...item,
+            inCart: 0,
+          };
+        return item;
+      })
+    );
   };
 
-  const increment = (index) => {
-    setItems((prevItems) => {
-      prevItems[index].inCart += 1;
-      return [...prevItems];
-    });
+  const increment = (indexToChange) => {
+    setItems((prevItems) =>
+      prevItems.map((item, index) => {
+        if (indexToChange === index)
+          return {
+            ...item,
+            inCart: item.inCart + 1,
+          };
+        return item;
+      })
+    );
   };
 
-  const decrement = (index) => {
-    setItems((prevItems) => {
-      prevItems[index].inCart -= 1;
-      return [...prevItems];
-    });
+  const decrement = (indexToChange) => {
+    setItems((prevItems) =>
+      prevItems.map((item, index) => {
+        if (indexToChange === index)
+          return {
+            ...item,
+            inCart: Math.max(item.inCart - 1, 1),
+          };
+        return item;
+      })
+    );
   };
   return (
     <>
