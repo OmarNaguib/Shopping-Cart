@@ -67,7 +67,7 @@
 .special-text {
   color: red;
 }
-
+/* shop */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -81,6 +81,10 @@
 .card > img {
   width: 200px;
   height: auto;
+}
+
+button.in-cart {
+  background-color: rgb(25, 214, 25);
 }
 
 /* cart */
