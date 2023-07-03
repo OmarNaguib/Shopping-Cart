@@ -36,7 +36,7 @@ function setup() {
 describe("When displaying cart items", () => {
   it("displays only inCart items", () => {
     const { items, removeFromCart, increment, decrement } = setup();
-    const { container } = render(
+    render(
       <CheckItems
         items={items}
         removeFromCart={removeFromCart}
@@ -52,7 +52,7 @@ describe("When displaying cart items", () => {
   it("Calls appropriate functions", async () => {
     const { items, removeFromCart, increment, decrement } = setup();
     const user = userEvent.setup();
-    const { container } = render(
+    render(
       <CheckItems
         items={items}
         removeFromCart={removeFromCart}

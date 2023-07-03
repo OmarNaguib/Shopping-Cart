@@ -1,5 +1,3 @@
-import getData from "../utils/getData";
-import { useState } from "react";
 import Cards from "./Cards";
 
 export default function Shop({ items, addToCart }) {

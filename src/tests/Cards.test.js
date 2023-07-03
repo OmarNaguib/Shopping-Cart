@@ -33,8 +33,8 @@ function setup() {
 
 describe("When displaying products", () => {
   it("renders accurate item info", () => {
-    const { items, addToCart } = setup();
-    const { container } = render(<Cards items={items} addToCart={jest.fn()} />);
+    const { items } = setup();
+    render(<Cards items={items} addToCart={jest.fn()} />);
     expect(screen.queryAllByTestId("card").length).toBe(3);
     expect(screen.queryAllByTestId("name").length).toBe(3);
     expect(screen.queryAllByTestId("name")[0].textContent).toBe("JOOLA");
@@ -47,7 +47,7 @@ describe("When displaying products", () => {
   it("activates callback", async () => {
     const { items, addToCart } = setup();
     const user = userEvent.setup();
-    const { container } = render(<Cards items={items} addToCart={addToCart} />);
+    render(<Cards items={items} addToCart={addToCart} />);
 
     const button = screen.getAllByRole("button")[0];
     await user.click(button);
