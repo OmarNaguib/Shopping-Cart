@@ -47,11 +47,9 @@ describe("When displaying products", () => {
   it("activates callback", async () => {
     const { items, addToCart } = setup();
     const user = userEvent.setup();
-
     const { container } = render(<Cards items={items} addToCart={addToCart} />);
 
     const button = screen.getAllByRole("button")[0];
-    console.log(button.textContent);
     await user.click(button);
     expect(addToCart).toBeCalled();
   });
