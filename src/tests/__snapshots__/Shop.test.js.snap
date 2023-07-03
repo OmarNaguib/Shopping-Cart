@@ -10,26 +10,29 @@ exports[`Shop page renders with one item 1`] = `
     >
       <div
         class="card"
+        data-testid="card"
       >
-        <img
-          alt=""
-          src="/static/media/1table_JOOLA J15 INSIDE TABLE TENNIS TABLE_599.00.dd9ef9f4bbc1398f6cc7.jpg"
+        <div
+          class="img"
         />
         <div
           class="name"
+          data-testid="name"
         >
           JOOLA J15 INSIDE TABLE TENNIS TABLE
         </div>
         <div
           class="price"
+          data-testid="price"
         >
           £
           599.00
         </div>
-        <button>
+        <button
+          class=""
+        >
           Add to Cart
         </button>
-        not
       </div>
     </div>
   </div>
