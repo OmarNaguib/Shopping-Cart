@@ -48,4 +48,28 @@ describe("When displaying cart items", () => {
     expect(screen.queryAllByTestId("name").length).toBe(2);
     expect(screen.queryAllByTestId("name")[0].textContent).toBe("table");
   });
+
+  it("Calls appropriate functions", async () => {
+    const { items, removeFromCart, increment, decrement } = setup();
+    const user = userEvent.setup();
+    const { container } = render(
+      <CheckItems
+        items={items}
+        removeFromCart={removeFromCart}
+        increment={increment}
+        decrement={decrement}
+      />
+    );
+    const incrementButton = screen.getAllByRole("button", { name: "+" })[0];
+    const decrementButton = screen.getAllByRole("button", { name: "-" })[0];
+    const deleteButton = screen.getAllByRole("button", { name: "delete" })[0];
+
+    await user.click(incrementButton);
+    await user.click(decrementButton);
+    await user.click(deleteButton);
+
+    expect(removeFromCart).toBeCalled();
+    expect(decrement).toBeCalled();
+    expect(removeFromCart).toBeCalled();
+  });
 });
