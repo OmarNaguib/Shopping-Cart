@@ -8,20 +8,26 @@ export default function CheckItems({
     .filter((item) => item.inCart)
     .map((item, index) => {
       return (
-        <div className="checkout-item" key={index}>
+        <div className="checkout-item" data-testid="checkout-item" key={index}>
           <div className="product">
             <img src={item.src} alt="" />
-            <div className="name">{item.name}</div>
+            <div className="name" data-testid="name">
+              {item.name}
+            </div>
           </div>
-          <div className="price">£{item.price}</div>
-          <div className="quantity">
-            <div className="number">{item.inCart}</div>
+          <div className="price" data-testid="price">
+            £{item.price}
+          </div>
+          <div className="quantity" data-testid="quantity">
+            <div className="number" data-testid="number">
+              {item.inCart}
+            </div>
             <div className="buttons">
               <button onClick={increment.bind(null, item.id)}>+</button>
               <button onClick={decrement.bind(null, item.id)}>-</button>
             </div>
           </div>
-          <div className="subtotal">
+          <div className="subtotal" data-testid="subtotar">
             £{(Math.round(item.price * item.inCart * 100) / 100).toFixed(2)}
           </div>
           <button onClick={removeFromCart.bind(null, item.id)}>delete</button>
