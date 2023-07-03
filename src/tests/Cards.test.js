@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Cards from "../components/Cards";
+import userEvent from "@testing-library/user-event";
 
 function setup() {
   const items = [
@@ -43,9 +44,15 @@ describe("When displaying products", () => {
     expect(screen.queryAllByRole("button")[0].textContent).toBe("Add to Cart");
   });
 
-  it("Behaves expectedly on cart addition", () => {
+  it("activates callback", async () => {
     const { items, addToCart } = setup();
+    const user = userEvent.setup();
 
-    const { container } = render(<Cards items={items} addToCart={jest.fn()} />);
+    const { container } = render(<Cards items={items} addToCart={addToCart} />);
+
+    const button = screen.getAllByRole("button")[0];
+    console.log(button.textContent);
+    await user.click(button);
+    expect(addToCart).toBeCalled();
   });
 });

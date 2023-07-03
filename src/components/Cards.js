@@ -17,7 +17,7 @@ export default function Cards({ items, addToCart }) {
         onClick={addToCart.bind(null, index)}
         className={item.inCart ? "in-cart" : ""}
       >
-        {item.inCart ? "In Cart " : "Add to Cart"}
+        {item.inCart ? "In Cart" : "Add to Cart"}
       </button>
     </div>
   ));
