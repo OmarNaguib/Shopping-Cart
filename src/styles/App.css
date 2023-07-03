@@ -68,23 +68,68 @@
   color: red;
 }
 /* shop */
+
+.shop {
+  display: flex;
+  justify-content: center;
+}
 .cards {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  gap: 15px;
+  padding: 50px;
 }
 
 .card {
   width: 300px;
-  height: 500px;
+  height: 350px;
+  display: grid;
+  border: 1px solid rgb(128, 128, 128, 0.4);
+  border-radius: 8px;
+  justify-content: center;
 }
 
-.card > img {
+.card > .img {
+  width: 100%;
+  height: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid rgb(128, 128, 128, 0.4);
+  background-position: center;
+  place-self: center;
+}
+.card > .name {
+  font-weight: bold;
+}
+
+.card > .name,
+.card > .price {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.card > button {
+  height: 40px;
   width: 200px;
-  height: auto;
+  place-self: center;
+  font-size: 20px;
+  border-radius: 8px;
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+.card > button:hover {
+  background-color: rgb(25, 214, 25);
 }
 
 button.in-cart {
   background-color: rgb(25, 214, 25);
+}
+button.in-cart:hover {
+  background-color: buttonface;
 }
 
 /* cart */
