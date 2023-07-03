@@ -8,7 +8,7 @@ export default function CheckItems({
     .filter((item) => item.inCart)
     .map((item, index) => {
       return (
-        <div className="checkout-item">
+        <div className="checkout-item" key={index}>
           <div className="product">
             <img src={item.src} alt="" />
             <div className="name">{item.name}</div>

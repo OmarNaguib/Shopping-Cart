@@ -1,6 +1,6 @@
 export default function Cards({ items, addToCart }) {
   const cards = items.map((item, index) => (
-    <div className="card" data-testid="card">
+    <div className="card" data-testid="card" key={index}>
       <div
         className="img"
         style={{
