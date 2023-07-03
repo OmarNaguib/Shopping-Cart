@@ -5,7 +5,6 @@ function importAll(r) {
     const attributes = removeExtension(item.replace("./", "")).split("_");
     return {
       src: r(item),
-      chosen: false,
       name: attributes[1],
       price: attributes[2],
       inCart: 0,
