@@ -24,5 +24,4 @@ const getData = () =>
     };
   });
 
-// console.log("here", getData());
 export default getData;
