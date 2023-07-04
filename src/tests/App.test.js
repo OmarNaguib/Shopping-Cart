@@ -32,7 +32,7 @@ describe("App Integration test", () => {
     expect(screen.queryAllByTestId("checkout-item").length).toBe(3);
   });
 
-  it("Cart interactes soundly:increments", async () => {
+  it("Cart interactes soundly: increments, decrements, calculates subtotal", async () => {
     render(<App />);
     const user = userEvent.setup();
 
@@ -55,5 +55,22 @@ describe("App Integration test", () => {
           screen.getByTestId("number").textContent
         ).toFixed(2)
     );
+  });
+
+  it("Cart interactes soundly: deletes", async () => {
+    render(<App />);
+    const user = userEvent.setup();
+
+    const toShop = screen.queryByRole("link", { name: "Shop" });
+    await userEvent.click(toShop);
+    const buttons = screen.queryAllByRole("button", { name: "Add to Cart" });
+    await userEvent.click(buttons[0]);
+    await userEvent.click(buttons[1]);
+    const toCart = screen.queryByRole("link", { name: "Cart" });
+    await userEvent.click(toCart);
+
+    await userEvent.click(screen.getAllByRole("button", { name: "delete" })[0]);
+
+    expect(screen.queryAllByTestId("checkout-item").length).toBe(1);
   });
 });
