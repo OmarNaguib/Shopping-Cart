@@ -31,4 +31,29 @@ describe("App Integration test", () => {
     await userEvent.click(toCart);
     expect(screen.queryAllByTestId("checkout-item").length).toBe(3);
   });
+
+  it("Cart interactes soundly:increments", async () => {
+    render(<App />);
+    const user = userEvent.setup();
+
+    const toShop = screen.queryByRole("link", { name: "Shop" });
+    await userEvent.click(toShop);
+    const buttons = screen.queryAllByRole("button", { name: "Add to Cart" });
+    await userEvent.click(buttons[0]);
+    const toCart = screen.queryByRole("link", { name: "Cart" });
+    await userEvent.click(toCart);
+
+    await userEvent.click(screen.getByRole("button", { name: "+" }));
+    await userEvent.click(screen.getByRole("button", { name: "+" }));
+    await userEvent.click(screen.getByRole("button", { name: "-" }));
+
+    expect(screen.getByTestId("number").textContent).toBe("2");
+    expect(screen.getByTestId("subtotal").textContent).toBe(
+      "£" +
+        (
+          screen.getByTestId("price").textContent.slice(1) *
+          screen.getByTestId("number").textContent
+        ).toFixed(2)
+    );
+  });
 });
