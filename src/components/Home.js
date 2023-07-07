@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 export default function Home() {
   return (
     <div className="home">
@@ -6,6 +7,7 @@ export default function Home() {
           <span>Athletes are cool,</span>
           <span>But some are just... </span>
           <span className="special-text">Exceptional.</span>
+          <NavLink to="shop">Get Ready!</NavLink>
         </div>
       </div>
     </div>

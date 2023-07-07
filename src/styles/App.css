@@ -90,6 +90,17 @@
   gap: 10px;
   align-items: center;
 }
+.home-message a {
+  color: white;
+  background-color: rgb(37, 99, 235, 0.7);
+  font-size: 35px;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+}
+.home-message a:hover {
+  background-color: rgb(37, 99, 235, 0.9);
+}
 
 .cool-text {
   color: #2563eb;
