@@ -3,8 +3,9 @@ export default function Home() {
     <div className="home">
       <div className="home-message">
         <div className="text">
-          Athletes are cool <br /> But some are just{" "}
-          <span className="special-text">Exceptional</span>
+          <span>Athletes are cool,</span>
+          <span>But some are just... </span>
+          <span className="special-text">Exceptional.</span>
         </div>
       </div>
     </div>

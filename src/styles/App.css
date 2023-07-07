@@ -11,7 +11,11 @@
   --amber-400: #fbbf24;
   --amber-100: #fef3c7;
   --lime-400: #a3e635;
+  font-family: "Roboto Slab", serif;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Tinos:wght@400;700&display=swap");
+
 /* app */
 
 .header {
@@ -25,7 +29,7 @@
   background-color: var(--red-600);
   position: relative;
   z-index: 1;
-  box-shadow: 0px 0px #dc2626;
+  box-shadow: 0px 4px 7px #dc2626;
 }
 
 .header > .title {
@@ -65,16 +69,26 @@
 }
 
 .home-message {
-  color: white;
+  color: #f8fafc;
+
   grid-row: 2/3;
   grid-column: 2/3;
   margin-right: 50px;
-  background-color: rgb(255, 255, 255, 0.1);
+  background-color: #22d3ee3d;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 22px;
-  border-radius: 3px;
+  border-radius: 8px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.home-message > .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
 }
 
 .cool-text {
@@ -82,7 +96,9 @@
 }
 
 .special-text {
-  color: red;
+  font-size: 1.1em;
+  color: rgb(248, 28, 28);
+  text-shadow: black 0px 0px 4px;
 }
 /* shop */
 
