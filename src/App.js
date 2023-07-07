@@ -5,6 +5,7 @@ import Shop from "./components/Shop";
 import Cart from "./components/Cart";
 import { useState } from "react";
 import getData from "./utils/getData";
+import "./styles/reset.css";
 import "./styles/App.css";
 
 function App() {
