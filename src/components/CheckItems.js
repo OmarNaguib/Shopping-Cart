@@ -30,7 +30,12 @@ export default function CheckItems({
           <div className="subtotal" data-testid="subtotal">
             £{(Math.round(item.price * item.inCart * 100) / 100).toFixed(2)}
           </div>
-          <button onClick={removeFromCart.bind(null, item.id)}>delete</button>
+          <button
+            className="delete"
+            onClick={removeFromCart.bind(null, item.id)}
+          >
+            delete
+          </button>
         </div>
       );
     });

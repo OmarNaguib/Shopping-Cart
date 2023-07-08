@@ -126,9 +126,6 @@
   align-items: center;
 }
 .shop h1 {
-  /* margin: 20px;
-  margin-top: 40px; */
-  /* border-bottom: 1px solid rgb(128, 128, 128, 0.5); */
   display: flex;
   justify-content: center;
   padding: 40px 0px;
@@ -201,13 +198,15 @@ button.in-cart:hover {
 /* cart */
 .cart {
   display: grid;
-  place-content: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
 }
 
 .cart h1 {
   border-bottom: 1px solid rgb(128, 128, 128, 0.5);
   margin: 0px;
-  padding: 15px 0px;
+  padding: 40px 0px 20px 0px;
+  font-size: 2rem;
 }
 
 .checkout-card {
@@ -219,17 +218,19 @@ button.in-cart:hover {
   display: flex;
   padding: 15px 0px;
   border-bottom: 1px solid rgb(128, 128, 128, 0.5);
+  font-size: 18px;
 }
 
 .checkout-item {
-  height: 300;
+  height: 100px;
   display: flex;
   align-items: center;
+  font-size: 18px;
 }
 
 .checkout-item img {
-  height: 90px;
-  width: auto;
+  height: auto;
+  width: 100px;
 }
 
 button.checkout {
@@ -254,16 +255,40 @@ button.checkout {
   align-items: center;
 }
 
+.checkout-item .quantity {
+  font-size: 22px;
+}
+.quantity .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-left: 5px;
+}
+.quantity button {
+  background-color: var(--slate-400);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 22px;
+}
+.quantity button:hover {
+  background-color: var(--slate-300);
+}
+
 .subtotal {
   width: 100px;
 }
 
-.quantity > .buttons {
-  display: flex;
-  flex-direction: column;
+button.delete {
+  background-color: var(--red-500);
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  color: var(--slate-900);
+  padding: 10px;
+  color: white;
 }
-
-.checkout-item button {
-  height: 20px;
-  width: 50px;
+button.delete:hover {
+  background-color: var(--red-600);
 }
