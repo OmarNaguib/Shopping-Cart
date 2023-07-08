@@ -6,33 +6,40 @@ exports[`Shop page renders with one item 1`] = `
     class="shop"
   >
     <div
-      class="cards"
+      class="content"
     >
+      <h1>
+        Equipment
+      </h1>
       <div
-        class="card"
-        data-testid="card"
+        class="cards"
       >
         <div
-          class="img"
-        />
-        <div
-          class="name"
-          data-testid="name"
+          class="card"
+          data-testid="card"
         >
-          JOOLA J15 INSIDE TABLE TENNIS TABLE
+          <div
+            class="img"
+          />
+          <div
+            class="name"
+            data-testid="name"
+          >
+            JOOLA J15 INSIDE TABLE TENNIS TABLE
+          </div>
+          <div
+            class="price"
+            data-testid="price"
+          >
+            £
+            599.00
+          </div>
+          <button
+            class=""
+          >
+            Add to Cart
+          </button>
         </div>
-        <div
-          class="price"
-          data-testid="price"
-        >
-          £
-          599.00
-        </div>
-        <button
-          class=""
-        >
-          Add to Cart
-        </button>
       </div>
     </div>
   </div>

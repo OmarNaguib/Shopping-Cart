@@ -1,50 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Cart page renders correct elements 1`] = `
-<div>
-  <div
-    class="cart"
-  >
-    <div
-      class="checkout-card"
-    >
-      <h1>
-        Cart
-      </h1>
-      <div
-        class="label-row"
-      >
-        <div
-          class="product"
-        >
-          Product
-        </div>
-        <div
-          class="price"
-        >
-          Price
-        </div>
-        <div
-          class="quantity"
-        >
-          Quantity
-        </div>
-        <div
-          class="subtotal"
-        >
-          subtotal
-        </div>
-      </div>
-      <button
-        class="checkout"
-      >
-        Checkout
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Cart page renders correctly with one item 1`] = `
 <div>
   <div
@@ -80,11 +35,27 @@ exports[`Cart page renders correctly with one item 1`] = `
           subtotal
         </div>
       </div>
-      <button
-        class="checkout"
+      <div
+        class="check"
       >
-        Checkout
-      </button>
+        <div>
+          <span>
+            Grand total : 
+          </span>
+          <span
+            class="amount"
+            data-testid="grand-total"
+          >
+            £
+            0
+          </span>
+        </div>
+        <button
+          class="checkout"
+        >
+          Checkout
+        </button>
+      </div>
     </div>
   </div>
 </div>
