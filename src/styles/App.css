@@ -53,7 +53,7 @@
 }
 .shop,
 .cart {
-  background-color: var(--red-50);
+  background-color: #fafafa;
 }
 /* home */
 
@@ -115,22 +115,40 @@
 
 .shop {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+.shop > .content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.shop h1 {
+  /* margin: 20px;
+  margin-top: 40px; */
+  /* border-bottom: 1px solid rgb(128, 128, 128, 0.5); */
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+  font-size: 2.5em;
+  color: var(--slate-900);
 }
 .cards {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 1000px;
+  max-width: 90%;
   gap: 15px;
-  padding: 50px;
 }
 
 .card {
+  flex: auto;
   background-color: #fff;
-  width: 300px;
-  height: 350px;
+  max-width: 400px;
+  height: 450px;
   display: grid;
   border: 1px solid rgb(128, 128, 128, 0.4);
   border-radius: 8px;
@@ -165,17 +183,19 @@
   border-radius: 8px;
   border: 1px solid black;
   font-weight: bold;
+  background-color: black;
+  color: white;
 }
 
 .card > button:hover {
-  background-color: rgb(25, 214, 25);
+  background-color: rgb(133, 199, 113);
 }
 
 button.in-cart {
-  background-color: rgb(25, 214, 25);
+  background-color: rgb(133, 199, 113);
 }
 button.in-cart:hover {
-  background-color: buttonface;
+  background-color: black;
 }
 
 /* cart */
