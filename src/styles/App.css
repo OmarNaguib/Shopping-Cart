@@ -194,9 +194,6 @@ button {
 button.in-cart {
   background-color: rgb(133, 199, 113);
 }
-button.in-cart:hover {
-  background-color: black;
-}
 
 /* cart */
 .cart {
