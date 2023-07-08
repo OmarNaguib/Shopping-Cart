@@ -1,5 +1,6 @@
 import LabelRow from "./LabelRow";
 import CheckItems from "./CheckItems";
+import Check from "./Check";
 
 export default function Cart(props) {
   return (
@@ -8,7 +9,7 @@ export default function Cart(props) {
         <h1>Cart</h1>
         <LabelRow></LabelRow>
         <CheckItems {...props}></CheckItems>
-        <button className="checkout">Checkout</button>
+        <Check items={props.items}></Check>
       </div>
     </div>
   );

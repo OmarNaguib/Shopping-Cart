@@ -13,6 +13,9 @@
   --lime-400: #a3e635;
   font-family: "Roboto Slab", serif;
 }
+button {
+  cursor: pointer;
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&family=Tinos:wght@400;700&display=swap");
 
@@ -233,12 +236,6 @@ button.in-cart:hover {
   width: 100px;
 }
 
-button.checkout {
-  width: 150px;
-  height: 50px;
-  font-size: 16px;
-}
-
 .product {
   width: 600px;
   display: flex;
@@ -291,4 +288,30 @@ button.delete {
 }
 button.delete:hover {
   background-color: var(--red-600);
+}
+
+.check {
+  margin-top: 100px;
+  place-self: center;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+button.checkout {
+  width: 150px;
+  height: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: var(--slate-400);
+  border: 3px solid var(--slate-300);
+  border: none;
+  border-radius: 8px;
+}
+button.checkout:hover {
+  background-color: var(--slate-300);
+  border: 3px solid var(--slate-400);
 }
