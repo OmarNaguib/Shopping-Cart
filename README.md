@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<a href="https://www.flaticon.com/free-icons/table-tennis" title="table tennis icons">Table tennis icons created by dDara - Flaticon</a>
+
 ## Available Scripts
 
 In the project directory, you can run:
