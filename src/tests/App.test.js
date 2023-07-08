@@ -42,7 +42,7 @@ describe("App Integration test", () => {
     expect(screen.queryAllByTestId("checkout-item").length).toBe(3);
   });
 
-  it("Cart interactes soundly: increments, decrements, calculates subtotal", async () => {
+  it("Cart interactes soundly: increments, decrements, calculates subtotal and grand-total", async () => {
     render(<App />);
     const user = userEvent.setup();
 
@@ -68,6 +68,13 @@ describe("App Integration test", () => {
 
     expect(screen.getByTestId("number").textContent).toBe("2");
     expect(screen.getByTestId("subtotal").textContent).toBe(
+      "£" +
+        (
+          screen.getByTestId("price").textContent.slice(1) *
+          screen.getByTestId("number").textContent
+        ).toFixed(2)
+    );
+    expect(screen.getByTestId("grand-total").textContent).toBe(
       "£" +
         (
           screen.getByTestId("price").textContent.slice(1) *

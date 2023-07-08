@@ -47,7 +47,7 @@ exports[`Cart page renders correctly with one item 1`] = `
             data-testid="grand-total"
           >
             £
-            0
+            0.00
           </span>
         </div>
         <button
