@@ -63,10 +63,14 @@ function App() {
     );
   };
 
+  const cartCount = items.reduce((total, current) => {
+    return total + !!current.inCart;
+  }, 0);
+
   return (
     <>
       <HashRouter>
-        <Header></Header>
+        <Header cartCount={cartCount}></Header>
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route
