@@ -40,6 +40,7 @@ describe("App Integration test", () => {
     });
 
     expect(screen.queryAllByTestId("checkout-item").length).toBe(3);
+    expect(screen.queryByTestId("cart-count").textContent).toBe("3");
   });
 
   it("Cart interactes soundly: increments, decrements, calculates subtotal and grand-total", async () => {

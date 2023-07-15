@@ -8,7 +8,9 @@ export default function Header({ cartCount }) {
         <NavLink to="/">Home</NavLink>
         <NavLink to="shop">Shop</NavLink>
         <NavLink to="cart">Cart</NavLink>
-        <div className="cart-count">{cartCount}</div>
+        <div className="cart-count" data-testid="cart-count">
+          {cartCount}
+        </div>
       </div>
     </div>
   );
