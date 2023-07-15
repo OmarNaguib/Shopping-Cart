@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Shopping-Cart/static/css/main.016d96eb.css",
-    "main.js": "/Shopping-Cart/static/js/main.16c9665f.js",
+    "main.js": "/Shopping-Cart/static/js/main.32a6a984.js",
     "static/media/2pat_BRIBAR RALLY TABLE TENNIS BAT WITH FREE BAT CASE_29.99.png": "/Shopping-Cart/static/media/2pat_BRIBAR RALLY TABLE TENNIS BAT WITH FREE BAT CASE_29.99.57c95f03bc0a4a694cbf.png",
     "static/media/wallpaper3.jpg": "/Shopping-Cart/static/media/wallpaper3.8d70c4d1148336ff4b59.jpg",
     "static/media/3balls_DOUBLE FISH V40+ 3* NEW GENERATION TABLE TENNIS BALL_9.99.png": "/Shopping-Cart/static/media/3balls_DOUBLE FISH V40+ 3* NEW GENERATION TABLE TENNIS BALL_9.99.174a9f043f5c81180db8.png",
@@ -13,10 +13,10 @@
     "static/media/1table_JOOLA CITY OUTDOOR TABLE TENNIS TABLE_2199.00.jpg": "/Shopping-Cart/static/media/1table_JOOLA CITY OUTDOOR TABLE TENNIS TABLE_2199.00.e3ecc00823af0b902701.jpg",
     "index.html": "/Shopping-Cart/index.html",
     "main.016d96eb.css.map": "/Shopping-Cart/static/css/main.016d96eb.css.map",
-    "main.16c9665f.js.map": "/Shopping-Cart/static/js/main.16c9665f.js.map"
+    "main.32a6a984.js.map": "/Shopping-Cart/static/js/main.32a6a984.js.map"
   },
   "entrypoints": [
     "static/css/main.016d96eb.css",
-    "static/js/main.16c9665f.js"
+    "static/js/main.32a6a984.js"
   ]
 }
